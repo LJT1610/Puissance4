@@ -187,7 +187,7 @@ int compteDansDirection(const char grille[LIGNES][COLONNES], int ligne, int colo
     while (1) {
         ligne += sautLigne;
         colonne += sautColonne;
-
+        /// Colone
         if (!estDansGrille(ligne, colonne)) {
             return count;
         }
