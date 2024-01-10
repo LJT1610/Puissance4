@@ -103,17 +103,21 @@ void effaceConsole(void){
 
 }
 void afficheGrille(const char grille[LIGNES][COLONNES], int jetons, int nbHumains, int nbBots, int typeVictoire){
-
-    printf("Type Victoire : classique %c \n", typeVictoire);
+    printf("Type Vicroire : %c \n", typeVictoire);
     printf("Il y a %d humains et %d Bots \n", nbHumains, nbBots);
-    printf("puissance %d \n",jetons);
-    for(int i=0; i < LIGNES; i++)
-        {
+    for(int i=0; i < LIGNES; i++){
+        printf("|");
         for(int j = 0; j < COLONNES; j++){
             printf("%4c",grille[i][j]);
             }
+        printf("|");
         printf("\n");
     }
+    printf("|");
+    for(int i=0; i <= LIGNES; i++){
+        printf("%4c", i +'0');
+    }
+    printf("|\n");
 
 }
 
